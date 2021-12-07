@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "880195972494",
+    "project_id": "tele-taleem",
+    "storage_bucket": "tele-taleem.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:880195972494:android:74e1e9b18a9d36a52148df",
+        "android_client_info": {
+          "package_name": "com.example.android.teletaleem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "880195972494-kbm32c6ia93paadqsl9j0ijcjkeg0vnp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD__V_pbRFyZJccdaBwvMPwgAFyBrf3ZGo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "880195972494-kbm32c6ia93paadqsl9j0ijcjkeg0vnp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
