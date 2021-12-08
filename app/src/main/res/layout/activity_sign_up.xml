@@ -39,19 +39,22 @@
         android:background="@drawable/textbox_style"/>
 
     <Button
-        android:layout_width="300dp"
-        android:layout_height="50dp"
         android:id="@+id/createBtn"
-        android:text="SIGN UP"
-        android:layout_marginTop="30dp"
-        android:textSize="18sp"
-        android:background="@drawable/textbox_style"/>
-    <Button
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:id="@+id/loginBtn"
-        android:text="Already have an account"
         android:layout_marginTop="30dp"
-        android:textSize="17sp"
-        android:background="@drawable/textbox_style"/>
+        android:background="@drawable/textbox_style"
+        android:drawableRight="@drawable/ic_baseline_person_add_24"
+        android:text="SIGN UP"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/textbox_style"
+        android:drawableRight="@drawable/ic_baseline_account_circle_24"
+        android:text="Already have an account"
+        android:textSize="15sp" />
 </LinearLayout>

@@ -29,20 +29,24 @@
         android:layout_marginTop="10dp"
         android:hint="@string/hintpass"
         android:background="@drawable/textbox_style"/>
+
     <Button
-        android:layout_width="250dp"
-        android:layout_height="50dp"
         android:id="@+id/loginBtn"
-        android:text="Login"
-        android:layout_marginTop="30dp"
-        android:textSize="18sp"
-        android:background="@drawable/textbox_style"/>
-    <Button
         android:layout_width="250dp"
         android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/textbox_style"
+        android:drawableRight="@drawable/ic_baseline_login_24"
+        android:text="Login"
+        android:textSize="18sp" />
+
+    <Button
         android:id="@+id/createBtn"
-        android:text="SIGN UP"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
         android:layout_marginTop="10dp"
-        android:textSize="18sp"
-        android:background="@drawable/textbox_style"/>
+        android:background="@drawable/textbox_style"
+        android:drawableRight="@drawable/ic_baseline_person_add_24"
+        android:text="SIGN UP"
+        android:textSize="18sp" />
 </LinearLayout>
