@@ -1,66 +1,89 @@
-package com.example.android.teletaleem;
+package com.example.android.teletaleem
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity
+import android.widget.EditText
+import android.os.Bundle
+import com.example.android.teletaleem.R
+import com.example.android.teletaleem.SignUpActivity
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.auth.AuthResult
+import android.widget.Toast
+import android.content.Intent
+import android.view.View
+import android.widget.Button
+import com.example.android.teletaleem.LoginActivity
+import java.util.regex.Pattern
 
-import android.app.ProgressDialog;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-
-public class SignUpActivity extends AppCompatActivity {
-    FirebaseAuth auth;
-    EditText emailBox,passwordBox,nameBox;
-    Button loginBtn,signupBtn;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_up);
-
-        auth=FirebaseAuth.getInstance();
-        emailBox=findViewById(R.id.emailbox);
-        passwordBox=findViewById(R.id.passwordbox);
-        nameBox=findViewById(R.id.name);
-
-        loginBtn=findViewById(R.id.loginBtn);
-        signupBtn=findViewById(R.id.createBtn);
-
-        signupBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String email,pass,name;
-                email=emailBox.getText().toString();
-                pass=passwordBox.getText().toString();
-                name=nameBox.getText().toString();
-
-                auth.createUserWithEmailAndPassword(email,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            Toast.makeText(SignUpActivity.this,"Account is created.",Toast.LENGTH_SHORT).show();
-                        }
-                        else{
-                            Toast.makeText(SignUpActivity.this,task.getException().getLocalizedMessage(),Toast.LENGTH_SHORT).show();
-                        }
+class SignUpActivity : AppCompatActivity() {
+    var emailBox: EditText? = null
+    var passwordBox: EditText? = null
+    var nameBox: EditText? = null
+    var loginBtn: Button? = null
+    var signupBtn: Button? = null
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_sign_up)
+        getSupportActionBar()?.hide()
+        var emailBox:EditText = findViewById(R.id.emailbox)
+        var passwordBox:EditText = findViewById(R.id.passwordbox)
+        var nameBox:EditText = findViewById(R.id.name)
+        var loginBtn:Button = findViewById(R.id.loginBtn)
+        var signupBtn:Button = findViewById(R.id.createBtn)
+        signupBtn.setOnClickListener(View.OnClickListener {
+            val email: String
+            val pass: String
+            val name: String
+            email = emailBox.getText().toString()
+            pass = passwordBox.getText().toString()
+            name = nameBox.getText().toString()
+            if (email !== "" && pass.length >= 8 && isValidEmailAddress(email.trim { it <= ' ' }) && name.length >= 5) {
+                auth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        Toast.makeText(
+                            this@SignUpActivity,
+                            "Account is created.",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    } else {
+                        Toast.makeText(
+                            this@SignUpActivity,
+                            task.exception!!.localizedMessage,
+                            Toast.LENGTH_SHORT
+                        ).show()
                     }
-                });
+                }
+            } else {
+                if (!isValidEmailAddress(email.trim { it <= ' ' })) {
+                    emailBox.setError("Please Enter Proper Email ")
+                }
+                if (pass.length < 8) {
+                    passwordBox.setError("Please Fill This Field Correctly (Min 8 Characters)")
+                }
+                if (name.length < 5) {
+                    nameBox.setError("Please Fill This Field Correctly (Min 5 Char)")
+                }
             }
-        });
+        })
+        loginBtn.setOnClickListener(View.OnClickListener {
+            startActivity(Intent(this@SignUpActivity, LoginActivity::class.java))
+            //Only For Slide Show Between Intent
+            overridePendingTransition(R.anim.slidein, R.anim.slideout)
+        })
+    }
 
-        loginBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(SignUpActivity.this,LoginActivity.class));
-            }
-        });
+    //Disable Back Button
+    override fun onBackPressed() {}
+
+    companion object {
+        //Email Validator
+        fun isValidEmailAddress(email: String?): Boolean {
+            val stricterFilter = true
+            val stricterFilterString = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+            val laxString = ".+@.+\\.[A-Za-z]{2}[A-Za-z]*"
+            val emailRegex = if (stricterFilter) stricterFilterString else laxString
+            val p = Pattern.compile(emailRegex)
+            val m = p.matcher(email)
+            return m.matches()
+        }
     }
 }

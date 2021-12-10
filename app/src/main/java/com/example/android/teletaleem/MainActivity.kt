@@ -1,22 +1,24 @@
-package com.example.android.teletaleem;
+package com.example.android.teletaleem
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import com.example.android.teletaleem.R
+import android.content.Intent
+import android.os.Handler
+import com.example.android.teletaleem.LoginActivity
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.os.Handler;
-
-public class MainActivity extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                startActivity(new Intent(MainActivity.this,LoginActivity.class));
-            }
-        },2000);
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        getSupportActionBar()?.hide()
+        Handler().postDelayed({
+            startActivity(Intent(this@MainActivity, LoginActivity::class.java))
+            //Only For Slide Show Between Intent
+            overridePendingTransition(R.anim.slidein, R.anim.slideout)
+        }, 2000)
     }
+
+    //Disable Back Button
+    override fun onBackPressed() {}
 }

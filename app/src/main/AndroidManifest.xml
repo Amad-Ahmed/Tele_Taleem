@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TeleTaleem">
         <activity
+            android:name=".JoinActivity"
+            android:exported="true" />
+        <activity
             android:name=".SignUpActivity"
             android:exported="false" />
         <activity

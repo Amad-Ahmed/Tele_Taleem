@@ -4,31 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#cccccc"
     android:orientation="vertical"
     android:padding="30dp"
     tools:context=".LoginActivity">
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:textSize="60sp"
-    android:text="@string/login"
-    android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:textColor="#D32F2F"
+        android:textSize="60sp"
+        android:textStyle="bold" />
+
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
         android:id="@+id/emailbox"
-        android:inputType="textEmailAddress"
-        android:layout_marginTop="80dp"
-        android:hint="@string/hintmail"
-        android:background="@drawable/textbox_style"/>
-    <EditText
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/textbox_style"
+        android:backgroundTint="#F8F6F6"
+        android:hint="@string/hintmail"
+        android:inputType="textEmailAddress"
+        android:textColor="#050505"
+        android:textColorHint="#000000" />
+
+    <EditText
         android:id="@+id/passwordbox"
-        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:layout_marginTop="10dp"
+        android:background="@drawable/textbox_style"
+        android:backgroundTint="#F8F6F6"
         android:hint="@string/hintpass"
-        android:background="@drawable/textbox_style"/>
+        android:inputType="textPassword"
+        android:textColor="#050505"
+        android:textColorHint="#000000" />
 
     <Button
         android:id="@+id/loginBtn"
@@ -38,6 +49,7 @@
         android:background="@drawable/textbox_style"
         android:drawableRight="@drawable/ic_baseline_login_24"
         android:text="Login"
+        android:textColor="#FFFFFF"
         android:textSize="18sp" />
 
     <Button
@@ -48,5 +60,6 @@
         android:background="@drawable/textbox_style"
         android:drawableRight="@drawable/ic_baseline_person_add_24"
         android:text="SIGN UP"
+        android:textColor="#FFFFFF"
         android:textSize="18sp" />
 </LinearLayout>
