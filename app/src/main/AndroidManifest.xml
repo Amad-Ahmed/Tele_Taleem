@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TeleTaleem">
         <activity
+            android:name=".StudentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TeacherActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SelectionActivity"
+            android:exported="false" />
+        <activity
             android:name=".JoinActivity"
             android:exported="true" />
         <activity

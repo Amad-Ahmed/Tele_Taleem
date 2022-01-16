@@ -3,4 +3,18 @@
     <string name="login">WELCOME \n BACK</string>
     <string name="hintmail">Enter email</string>
     <string name="hintpass">Enter password</string>
+    <string name="message2">Select your class</string>
+    <string name="Computer">Computer</string>
+    <string name="Punjabi">Punjabi</string>
+    <string name="Islamiat">Islamiat</string>
+    <string name="Urdu">Urdu</string>
+    <string name="Biology">Biology</string>
+    <string name="Mathematics">Mathematics</string>
+    <string name="Chemistry">Chemistry</string>
+    <string name="Physics">Physics</string>
+    <string name="English">English</string>
+    <string name="message">Please select classes you would like to teach</string>
+    <string name="message3">Register as Student</string>
+    <string name="message4">Register as Teacher</string>
+
 </resources>

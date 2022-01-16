@@ -11,9 +11,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         getSupportActionBar()?.hide()
         Handler().postDelayed({
-            startActivity(Intent(this@MainActivity, LoginActivity::class.java))
+            startActivity(Intent(this@MainActivity, SelectionActivity::class.java))
             //Only For Slide Show Between Intent
             overridePendingTransition(R.anim.slidein, R.anim.slideout)
         }, 2000)

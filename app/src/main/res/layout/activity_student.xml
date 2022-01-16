@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".StudentActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/message3"
+        android:textSize="30sp"
+        android:layout_marginLeft="70dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Full Name"
+        android:id="@+id/name"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter CNIC"
+        android:id="@+id/cnic"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter mobile number"
+        android:inputType="phone"
+        android:id="@+id/mobile"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/email"
+        android:hint="Enter Email"
+        android:inputType="textEmailAddress"/>
+    <Spinner
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/gender"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/message2"
+            android:textSize="20sp"/>
+        <Spinner
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:id="@+id/Class"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please tick subjects you would like to study :"
+            android:textSize="20sp"/>
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:columnCount="2"
+            android:rowCount="4">
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/English"
+                android:textSize="20sp"
+                android:id="@+id/eng"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Mathematics"
+                android:textSize="20sp"
+                android:id="@+id/math"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Physics"
+                android:textSize="20sp"
+                android:id="@+id/phy"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Chemistry"
+                android:textSize="20sp"
+                android:id="@+id/chem"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Biology"
+                android:textSize="20sp"
+                android:id="@+id/bio"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Islamiat"
+                android:textSize="20sp"
+                android:id="@+id/isl"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Urdu"
+                android:textSize="20sp"
+                android:id="@+id/urdu"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Punjabi"
+                android:textSize="20sp"
+                android:id="@+id/pun"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Computer"
+                android:textSize="20sp"
+                android:id="@+id/com"/>
+        </GridLayout>
+        <Spinner
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:id="@+id/timings"/>
+        <EditText
+            android:id="@+id/passwordbox"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/textbox_style"
+            android:backgroundTint="#FFFDFD"
+            android:hint="@string/hintpass"
+            android:inputType="textPassword"
+            android:textColor="#090909"
+            android:textColorHint="#090909" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/done"
+            android:text="Complete"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
