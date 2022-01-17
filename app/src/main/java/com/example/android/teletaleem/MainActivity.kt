@@ -6,7 +6,9 @@ import com.example.android.teletaleem.R
 import android.content.Intent
 import android.os.Handler
 import com.example.android.teletaleem.LoginActivity
+import com.google.firebase.database.FirebaseDatabase
 
+var db:FirebaseDatabase= FirebaseDatabase.getInstance()
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

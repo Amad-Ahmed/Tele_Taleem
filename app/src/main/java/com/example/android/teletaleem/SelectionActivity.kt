@@ -1,44 +1,44 @@
-package com.example.android.teletaleem;
+package com.example.android.teletaleem
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import com.example.android.teletaleem.R
+import android.content.Intent
+import android.view.View
+import android.widget.Button
+import com.example.android.teletaleem.TeacherActivity
+import com.example.android.teletaleem.StudentActivity
+import com.example.android.teletaleem.LoginActivity
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-
-public class SelectionActivity extends AppCompatActivity {
-    Button teacher,student,login;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_selection);
-        teacher=findViewById(R.id.Teacher);
-        student=findViewById(R.id.Student);
-        login=findViewById(R.id.loginBtn);
-
-        teacher.setOnClickListener(new View.OnClickListener() {//for teacher journey
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(SelectionActivity.this,TeacherActivity.class);
-                startActivity(i);
-            }
-        });
-        student.setOnClickListener(new View.OnClickListener() {//for student journey
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(SelectionActivity.this,StudentActivity.class);
-                startActivity(i);
-
-            }
-        });
-        login.setOnClickListener(new View.OnClickListener() {//for login journey
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(SelectionActivity.this,LoginActivity.class);
-                startActivity(i);
-            }
-        });
+class SelectionActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_selection)
+        var teacher: Button = findViewById(R.id.Teacher)
+        var student : Button= findViewById(R.id.Student)
+        var login: Button = findViewById(R.id.loginBtn)
+        teacher.setOnClickListener(
+            View.OnClickListener
+            //for teacher journey
+            {
+                val i = Intent(this@SelectionActivity, TeacherActivity::class.java)
+                startActivity(i)
+            })
+        student.setOnClickListener(
+            View.OnClickListener
+            //for student journey
+            {
+                val i = Intent(this@SelectionActivity, StudentActivity::class.java)
+                startActivity(i)
+            })
+        login.setOnClickListener(
+            View.OnClickListener
+            //for login journey
+            {
+                val i = Intent(this@SelectionActivity, LoginActivity::class.java)
+                startActivity(i)
+            })
+    }
+    override fun onBackPressed() {
     }
 }
