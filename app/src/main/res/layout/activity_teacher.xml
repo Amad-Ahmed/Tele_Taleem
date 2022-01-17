@@ -56,6 +56,30 @@
                 android:scrollbars="vertical"
                 android:id="@+id/education"
                 />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Experience (years)"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
+                android:id="@+id/years"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Key Subjects"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
+                android:id="@+id/KeySubj"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Certification"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
+                android:id="@+id/certification"
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
