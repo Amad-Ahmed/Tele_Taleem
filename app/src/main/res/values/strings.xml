@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Tele Taleem</string>
-    <string name="login">WELCOME \n BACK</string>
+    <string name="login">WELCOME \nBACK</string>
     <string name="hintmail">Enter email</string>
     <string name="hintpass">Enter password</string>
-    <string name="message2">Select your class</string>
+    <string name="message2">Class</string>
     <string name="Computer">Computer</string>
     <string name="Punjabi">Punjabi</string>
     <string name="Islamiat">Islamiat</string>
@@ -16,5 +16,26 @@
     <string name="message">Please select classes you would like to teach</string>
     <string name="message3">Register as Student</string>
     <string name="message4">Register as Teacher</string>
+    <string name="faq_s">FAQ\'s</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="about_us">About Us</string>
+    <string name="log_in">Log IN</string>
+    <string name="register_as_student">Register as Student</string>
+    <string name="register_as_teacher">Register as Teacher</string>
+    <string name="gender">Gender</string>
+    <string name="please_tick_subjects_you_would_like_to_study">Please tick subjects you would like to study :</string>
+    <string name="timings">Timings</string>
+    <string name="complete">Complete</string>
+    <string name="enter_full_name">Enter Full Name</string>
+    <string name="enter_cnic">Enter CNIC</string>
+    <string name="enter_mobile_number">Enter mobile number</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="education_details">Education Details</string>
+    <string name="experience_years">Experience (years)</string>
+    <string name="key_subjects">Key Subjects</string>
+    <string name="certification">Certification</string>
+    <string name="please_select_subjects_you_would_like_to_teach">Please select subjects you would like to teach :</string>
+
+
 
 </resources>

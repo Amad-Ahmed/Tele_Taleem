@@ -16,143 +16,234 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter Full Name"
-        android:id="@+id/name"
-        />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter CNIC"
-        android:id="@+id/cnic"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter mobile number"
-        android:inputType="phone"
-        android:id="@+id/mobile"
-        />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/email"
-        android:hint="Enter Email"
-        android:inputType="textEmailAddress"/>
-    <Spinner
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:id="@+id/gender"/>
+        android:orientation="vertical"
+        android:id="@+id/CL1">
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="@string/enter_full_name"
+            app:layout_constraintBottom_toTopOf="@id/cnic"
+            app:layout_constraintEnd_toEndOf="@id/CL1"
+            app:layout_constraintStart_toStartOf="@id/CL1"
+            app:layout_constraintTop_toTopOf="@id/CL1" />
+
+        <EditText
+            android:id="@+id/cnic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="@string/enter_cnic"
+            app:layout_constraintBottom_toTopOf="@id/mobile"
+            app:layout_constraintEnd_toEndOf="@id/CL1"
+            app:layout_constraintStart_toStartOf="@id/CL1"
+            app:layout_constraintTop_toBottomOf="@id/name" />
+
+        <EditText
+            android:id="@+id/mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="@string/enter_mobile_number"
+            android:inputType="phone"
+            app:layout_constraintBottom_toTopOf="@id/email"
+            app:layout_constraintEnd_toEndOf="@id/CL1"
+            app:layout_constraintStart_toStartOf="@id/CL1"
+            app:layout_constraintTop_toBottomOf="@id/cnic" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="@string/enter_email"
+            android:inputType="textEmailAddress"
+            app:layout_constraintBottom_toTopOf="@id/gen"
+            app:layout_constraintEnd_toEndOf="@id/CL1"
+            app:layout_constraintStart_toStartOf="@id/CL1"
+            app:layout_constraintTop_toBottomOf="@id/mobile" />
         <TextView
+            android:id="@+id/gen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gender"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@id/CL1"
+            app:layout_constraintBottom_toBottomOf="@id/gender"
+            app:layout_constraintTop_toTopOf="@id/gender" />
+
+        <Spinner
+            android:id="@+id/gender"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintBottom_toTopOf="@id/selectClass"
+            app:layout_constraintStart_toEndOf="@id/gen"
+            app:layout_constraintTop_toBottomOf="@id/email" />
+        <TextView
+            android:id="@+id/selectClass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/message2"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@id/CL1"
+            app:layout_constraintBottom_toBottomOf="@id/Class"
+            app:layout_constraintTop_toTopOf="@id/Class"/>
+
         <Spinner
+            android:id="@+id/Class"
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:id="@+id/Class"/>
+            android:layout_marginLeft="25dp"
+            app:layout_constraintBottom_toTopOf="@id/subj"
+            app:layout_constraintStart_toEndOf="@id/selectClass"
+            app:layout_constraintTop_toBottomOf="@id/gender" />
+
         <TextView
+            android:id="@+id/subj"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Please tick subjects you would like to study :"
-            android:textSize="20sp"/>
+            android:layout_marginTop="10dp"
+            android:text="@string/please_tick_subjects_you_would_like_to_study"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@id/grid"
+            app:layout_constraintEnd_toEndOf="@id/CL1"
+            app:layout_constraintHorizontal_bias="0.466"
+            app:layout_constraintStart_toStartOf="@id/CL1"
+            app:layout_constraintTop_toBottomOf="@id/Class" />
+
         <GridLayout
+            android:id="@+id/grid"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
+            android:layout_marginTop="5dp"
             android:columnCount="2"
-            android:rowCount="4">
+            android:orientation="vertical"
+            android:rowCount="4"
+            app:layout_constraintBottom_toTopOf="@id/timings"
+            app:layout_constraintEnd_toEndOf="@id/CL1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/CL1"
+            app:layout_constraintTop_toBottomOf="@id/subj">
+
             <CheckBox
+                android:id="@+id/eng"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/English"
-                android:textSize="20sp"
-                android:id="@+id/eng"/>
+                android:textSize="20sp" />
 
             <CheckBox
+                android:id="@+id/math"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Mathematics"
-                android:textSize="20sp"
-                android:id="@+id/math"/>
+                android:textSize="20sp" />
 
             <CheckBox
+                android:id="@+id/phy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Physics"
-                android:textSize="20sp"
-                android:id="@+id/phy"/>
+                android:textSize="20sp" />
 
             <CheckBox
+                android:id="@+id/chem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Chemistry"
-                android:textSize="20sp"
-                android:id="@+id/chem"/>
+                android:textSize="20sp" />
 
             <CheckBox
+                android:id="@+id/bio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Biology"
-                android:textSize="20sp"
-                android:id="@+id/bio"/>
+                android:textSize="20sp" />
 
             <CheckBox
+                android:id="@+id/isl"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Islamiat"
-                android:textSize="20sp"
-                android:id="@+id/isl"/>
+                android:textSize="20sp" />
 
             <CheckBox
+                android:id="@+id/urdu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Urdu"
-                android:textSize="20sp"
-                android:id="@+id/urdu"/>
+                android:textSize="20sp" />
 
             <CheckBox
+                android:id="@+id/pun"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Punjabi"
-                android:textSize="20sp"
-                android:id="@+id/pun"/>
+                android:textSize="20sp" />
 
             <CheckBox
+                android:id="@+id/com"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Computer"
-                android:textSize="20sp"
-                android:id="@+id/com"/>
+                android:textSize="20sp" />
         </GridLayout>
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/timings"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@id/CL1"
+            app:layout_constraintBottom_toBottomOf="@id/timings"
+            app:layout_constraintTop_toTopOf="@id/timings"
+            />
+
         <Spinner
+            android:id="@+id/timings"
             android:layout_width="100dp"
             android:layout_height="40dp"
-            android:id="@+id/timings"/>
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toTopOf="@id/passwordbox"
+            app:layout_constraintStart_toEndOf="@id/time"
+            app:layout_constraintTop_toBottomOf="@id/grid" />
+
         <EditText
             android:id="@+id/passwordbox"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/textbox_style"
             android:backgroundTint="#FFFDFD"
             android:hint="@string/hintpass"
             android:inputType="textPassword"
             android:textColor="#090909"
-            android:textColorHint="#090909" />
+            android:textColorHint="#090909"
+            app:layout_constraintBottom_toTopOf="@id/done"
+            app:layout_constraintEnd_toEndOf="@id/CL1"
+            app:layout_constraintStart_toStartOf="@id/CL1"
+            app:layout_constraintTop_toBottomOf="@id/timings" />
+
         <Button
+            android:id="@+id/done"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/done"
-            android:text="Complete"
-            android:layout_gravity="center_horizontal"/>
-    </LinearLayout>
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="@string/complete"
+            app:layout_constraintBottom_toBottomOf="@id/CL1"
+            app:layout_constraintEnd_toEndOf="@id/CL1"
+            app:layout_constraintStart_toStartOf="@id/CL1"
+            app:layout_constraintTop_toBottomOf="@id/passwordbox" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
 </LinearLayout>

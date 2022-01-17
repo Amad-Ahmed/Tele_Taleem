@@ -6,39 +6,89 @@
     android:layout_height="match_parent"
     tools:context=".SelectionActivity">
 
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="176dp"-->
+<!--        android:layout_marginEnd="4dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:srcCompat="@drawable/logo" />-->
+
+    <ImageView
+        android:id="@+id/teleT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="165dp"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.28"
+        app:srcCompat="@drawable/ic_teletaleem"
+        tools:ignore="MissingConstraints" />
+
     <Button
         android:id="@+id/Teacher"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:text="Register as Teacher"
+        android:text="@string/register_as_teacher"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.306" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/Student"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:text="Register as Student"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.415" />
+        android:layout_marginTop="20dp"
+        android:text="@string/register_as_student"
+        app:layout_constraintEnd_toEndOf="@+id/Teacher"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="@+id/Teacher"
+        app:layout_constraintTop_toBottomOf="@+id/Teacher" />
 
     <Button
         android:id="@+id/loginBtn"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:text="Log IN"
+        android:layout_marginTop="20dp"
+        android:text="@string/log_in"
+        app:layout_constraintEnd_toEndOf="@+id/Student"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/Student"
+        app:layout_constraintTop_toBottomOf="@+id/Student" />
+
+    <Button
+        android:id="@+id/AboutUs"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="@string/about_us"
+        app:layout_constraintBottom_toBottomOf="@+id/Contactus"
+        app:layout_constraintEnd_toStartOf="@+id/Contactus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Contactus" />
+
+    <Button
+        android:id="@+id/Contactus"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="@string/contact_us"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.555" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/FAQ"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="@string/faq_s"
+        app:layout_constraintBottom_toBottomOf="@+id/Contactus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Contactus"
+        app:layout_constraintTop_toTopOf="@+id/Contactus" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,113 +16,192 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:id="@+id/cl2">
+
             <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter Full Name"
-            android:id="@+id/name"
-            />
-            <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter CNIC"
-            android:id="@+id/cnic"/>
-            <EditText
+                android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter mobile number"
-                android:inputType="phone"
+                android:layout_marginTop="10dp"
+                android:hint="@string/enter_full_name"
+                app:layout_constraintEnd_toEndOf="@id/cl2"
+                app:layout_constraintStart_toStartOf="@id/cl2"
+                app:layout_constraintTop_toTopOf="@id/cl2" />
+
+            <EditText
+                android:id="@+id/cnic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="@string/enter_cnic"
+                app:layout_constraintEnd_toEndOf="@id/cl2"
+                app:layout_constraintStart_toStartOf="@id/cl2"
+                app:layout_constraintTop_toBottomOf="@id/name" />
+
+            <EditText
                 android:id="@+id/mobile"
-                />
-            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="@string/enter_mobile_number"
+                android:inputType="phone"
+                app:layout_constraintEnd_toEndOf="@id/cl2"
+                app:layout_constraintStart_toStartOf="@id/cl2"
+                app:layout_constraintTop_toBottomOf="@id/cnic" />
+
+            <EditText
                 android:id="@+id/email"
-                android:hint="Enter Email"
-                android:inputType="textEmailAddress"/>
-            <Spinner
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:id="@+id/gender"/>
-            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Education Details"
-                android:inputType="textMultiLine"
-                android:scrollbars="vertical"
-                android:id="@+id/education"
-                />
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Experience (years)"
-                android:inputType="textMultiLine"
-                android:scrollbars="vertical"
-                android:id="@+id/years"
-                />
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Key Subjects"
-                android:inputType="textMultiLine"
-                android:scrollbars="vertical"
-                android:id="@+id/KeySubj"
-                />
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Certification"
-                android:inputType="textMultiLine"
-                android:scrollbars="vertical"
-                android:id="@+id/certification"
-                />
+                android:layout_marginTop="5dp"
+                android:hint="@string/enter_email"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="@id/cl2"
+                app:layout_constraintStart_toStartOf="@id/cl2"
+                app:layout_constraintTop_toBottomOf="@id/mobile" />
             <TextView
+                android:id="@+id/gen"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/gender"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@id/cl2"
+                app:layout_constraintTop_toTopOf="@id/gender"
+                app:layout_constraintBottom_toBottomOf="@id/gender"
+                app:layout_constraintTop_toBottomOf="@id/email"/>
+
+            <Spinner
+                android:id="@+id/gender"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toEndOf="@id/gen"
+                app:layout_constraintTop_toBottomOf="@id/email" />
+
+            <EditText
+                android:id="@+id/education"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="@string/education_details"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
+                app:layout_constraintEnd_toEndOf="@id/cl2"
+                app:layout_constraintStart_toStartOf="@id/cl2"
+                app:layout_constraintTop_toBottomOf="@id/gender" />
+
+            <EditText
+                android:id="@+id/years"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="@string/experience_years"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
+                app:layout_constraintEnd_toEndOf="@id/cl2"
+                app:layout_constraintStart_toStartOf="@id/cl2"
+                app:layout_constraintTop_toBottomOf="@id/education" />
+
+            <EditText
+                android:id="@+id/KeySubj"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="@string/key_subjects"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
+                app:layout_constraintEnd_toEndOf="@id/cl2"
+                app:layout_constraintStart_toStartOf="@id/cl2"
+                app:layout_constraintTop_toBottomOf="@id/years" />
+
+            <EditText
+                android:id="@+id/certification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="@string/certification"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
+                app:layout_constraintEnd_toEndOf="@id/cl2"
+                app:layout_constraintStart_toStartOf="@id/cl2"
+                app:layout_constraintTop_toBottomOf="@id/KeySubj" />
+
+            <TextView
+                android:id="@+id/selectClass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="@string/message"
-                android:textSize="20sp"/>
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@id/cl2"
+                app:layout_constraintStart_toStartOf="@id/cl2"
+                app:layout_constraintTop_toBottomOf="@id/certification" />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="9th"
                 android:textSize="20sp"
-                android:id="@+id/ninth"/>
+                android:id="@+id/ninth"
+                app:layout_constraintStart_toStartOf="@id/cl2"
+                app:layout_constraintEnd_toStartOf="@id/tenth"
+                app:layout_constraintTop_toBottomOf="@id/selectClass"/>
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="10th"
                 android:textSize="20sp"
-                android:id="@+id/tenth"/>
+                android:id="@+id/tenth"
+
+                app:layout_constraintEnd_toEndOf="@id/cl2"
+                app:layout_constraintStart_toEndOf="@id/ninth"
+                app:layout_constraintTop_toBottomOf="@id/selectClass"/>
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="11th"
                 android:textSize="20sp"
-                android:id="@+id/eleventh"/>
+                android:id="@+id/eleventh"
+                app:layout_constraintStart_toStartOf="@id/cl2"
+                app:layout_constraintEnd_toStartOf="@id/twelve"
+                app:layout_constraintTop_toBottomOf="@id/ninth"/>
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="12th"
                 android:textSize="20sp"
-                android:id="@+id/twelve"/>
+                android:id="@+id/twelve"
+                app:layout_constraintEnd_toEndOf="@id/cl2"
+                app:layout_constraintStart_toEndOf="@id/eleventh"
+                app:layout_constraintTop_toBottomOf="@id/tenth"/>
+
             <TextView
+                android:id="@+id/SubjTeach"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Please select subjects you would like to teach :"
-                android:textSize="20sp"/>
+                android:layout_marginTop="10dp"
+                android:text="@string/please_select_subjects_you_would_like_to_teach"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@id/cl2"
+                app:layout_constraintStart_toStartOf="@id/cl2"
+                app:layout_constraintTop_toBottomOf="@id/twelve" />
             <GridLayout
+                android:id="@+id/grid"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:columnCount="2"
-                android:rowCount="4">
+                android:rowCount="4"
+                app:layout_constraintStart_toStartOf="@id/cl2"
+                app:layout_constraintEnd_toEndOf="@id/cl2"
+                app:layout_constraintTop_toBottomOf="@id/SubjTeach">
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -186,29 +265,54 @@
                     android:textSize="20sp"
                     android:id="@+id/com"/>
             </GridLayout>
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/timings"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@id/cl2"
+                app:layout_constraintTop_toTopOf="@id/timings"
+                app:layout_constraintBottom_toBottomOf="@id/timings"
+                app:layout_constraintTop_toBottomOf="@id/grid"/>
+
             <Spinner
+                android:id="@+id/timings"
                 android:layout_width="100dp"
                 android:layout_height="40dp"
-                android:id="@+id/timings"/>
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toEndOf="@id/time"
+                app:layout_constraintTop_toBottomOf="@id/grid" />
+
             <EditText
                 android:id="@+id/passwordbox"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/textbox_style"
                 android:backgroundTint="#FFFDFD"
                 android:hint="@string/hintpass"
                 android:inputType="textPassword"
                 android:textColor="#090909"
-                android:textColorHint="#090909" />
+                android:textColorHint="#090909"
+                app:layout_constraintEnd_toEndOf="@id/cl2"
+                app:layout_constraintStart_toStartOf="@id/cl2"
+                app:layout_constraintTop_toBottomOf="@id/timings" />
+
             <Button
+                android:id="@+id/done"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/done"
-                android:text="Complete"
-                android:layout_gravity="center_horizontal"/>
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="@string/complete"
+                app:layout_constraintBottom_toBottomOf="@id/cl2"
+                app:layout_constraintEnd_toEndOf="@id/cl2"
+                app:layout_constraintStart_toStartOf="@id/cl2"
+                app:layout_constraintTop_toBottomOf="@id/passwordbox" />
 
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
 </LinearLayout>
