@@ -92,6 +92,7 @@ class StudentActivity : AppCompatActivity() {
                 auth.createUserWithEmailAndPassword(email, mypassword).addOnCompleteListener { task ->
                     if (task.isSuccessful) {
                         //Adding Student Details
+                        var count=0
                         var student=db.getReference().child("Student Details").child(auth.currentUser!!.uid.toString())
                         student.child("Name").setValue(name)
                         student.child("CNIC").setValue(CNIC)
@@ -103,30 +104,48 @@ class StudentActivity : AppCompatActivity() {
                         student.child("Password").setValue(mypassword)
                         //Putting Student in Related Subjects
                         if(english.isChecked()){
+                            student.child("Subjects").child(count.toString()).setValue("English")
+                            count++
                             db.getReference().child("Students").child("English").child(myclass).child(mytiming).child(auth.currentUser!!.uid.toString()).setValue(name)
                         }
                         if(math.isChecked()){
+                            student.child("Subjects").child(count.toString()).setValue("Math")
+                            count++
                             db.getReference().child("Students").child("Math").child(myclass).child(mytiming).child(auth.currentUser!!.uid.toString()).setValue(name)
                         }
                         if(physics.isChecked()){
+                            student.child("Subjects").child(count.toString()).setValue("Physics")
+                            count++
                             db.getReference().child("Students").child("Physics").child(myclass).child(mytiming).child(auth.currentUser!!.uid.toString()).setValue(name)
                         }
                         if(chemistry.isChecked()){
+                            student.child("Subjects").child(count.toString()).setValue("Chemistry")
+                            count++
                             db.getReference().child("Students").child("Chemistry").child(myclass).child(mytiming).child(auth.currentUser!!.uid.toString()).setValue(name)
                         }
                         if(biology.isChecked()){
+                            student.child("Subjects").child(count.toString()).setValue("Biology")
+                            count++
                             db.getReference().child("Students").child("Biology").child(myclass).child(mytiming).child(auth.currentUser!!.uid.toString()).setValue(name)
                         }
                         if(islamiat.isChecked()){
+                            student.child("Subjects").child(count.toString()).setValue("Islamiat")
+                            count++
                             db.getReference().child("Students").child("Islamiat").child(myclass).child(mytiming).child(auth.currentUser!!.uid.toString()).setValue(name)
                         }
                         if(urdu.isChecked()){
+                            student.child("Subjects").child(count.toString()).setValue("Urdu")
+                            count++
                             db.getReference().child("Students").child("Urdu").child(myclass).child(mytiming).child(auth.currentUser!!.uid.toString()).setValue(name)
                         }
                         if(punjabi.isChecked()){
+                            student.child("Subjects").child(count.toString()).setValue("Punjabi")
+                            count++
                             db.getReference().child("Students").child("Punjabi").child(myclass).child(mytiming).child(auth.currentUser!!.uid.toString()).setValue(name)
                         }
                         if(computer.isChecked()){
+                            student.child("Subjects").child(count.toString()).setValue("Computer")
+                            count++
                             db.getReference().child("Students").child("Computer").child(myclass).child(mytiming).child(auth.currentUser!!.uid.toString()).setValue(name)
                         }
                         Toast.makeText(

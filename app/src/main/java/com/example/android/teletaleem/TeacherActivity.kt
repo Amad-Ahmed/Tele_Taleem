@@ -117,6 +117,8 @@ class TeacherActivity : AppCompatActivity() {
                     if (task.isSuccessful) {
                         //Adding Student Details
                         var teacher=db.getReference().child("Teacher Details").child(auth.currentUser!!.uid.toString())
+                        var countclass=0
+                        var countsubject=0
                         teacher.child("Name").setValue(name)
                         teacher.child("CNIC").setValue(CNIC)
                         teacher.child("Mobile No").setValue(mobilenumber)
@@ -128,8 +130,27 @@ class TeacherActivity : AppCompatActivity() {
                         teacher.child("Key Subjects").setValue(mysubjects)
                         teacher.child("Timing").setValue(mytiming)
                         teacher.child("Password").setValue(mypassword)
+                        //Setting Classes
+                        if(ninth.isChecked()){
+                            teacher.child("Classes").child(countclass.toString()).setValue("9th")
+                            countclass++
+                        }
+                        if(tenth.isChecked()){
+                            teacher.child("Classes").child(countclass.toString()).setValue("10th")
+                            countclass++
+                        }
+                        if(eleventh.isChecked()){
+                            teacher.child("Classes").child(countclass.toString()).setValue("11th")
+                            countclass++
+                        }
+                        if(twelveth.isChecked()){
+                            teacher.child("Classes").child(countclass.toString()).setValue("12th")
+                            countclass++
+                        }
                         //Putting Student in Related Subjects
                         if(english.isChecked()){
+                            teacher.child("Subjects").child(countsubject.toString()).setValue("English")
+                            countsubject++
                             if(ninth.isChecked()){
                                 db.getReference().child("Teachers").child("English").child("9th").child(mytiming).child(auth.currentUser!!.uid.toString()).setValue(name)
                             }
@@ -144,6 +165,8 @@ class TeacherActivity : AppCompatActivity() {
                             }
                         }
                         if(math.isChecked()){
+                            teacher.child("Subjects").child(countsubject.toString()).setValue("Math")
+                            countsubject++
                             if(ninth.isChecked()){
                                 db.getReference().child("Teachers").child("Math").child("9th").child(mytiming).child(auth.currentUser!!.uid.toString()).setValue(name)
                             }
@@ -158,6 +181,8 @@ class TeacherActivity : AppCompatActivity() {
                             }
                         }
                         if(physics.isChecked()){
+                            teacher.child("Subjects").child(countsubject.toString()).setValue("Physics")
+                            countsubject++
                             if(ninth.isChecked()){
                                 db.getReference().child("Teachers").child("Physics").child("9th").child(mytiming).child(auth.currentUser!!.uid.toString()).setValue(name)
                             }
@@ -172,6 +197,8 @@ class TeacherActivity : AppCompatActivity() {
                             }
                         }
                         if(chemistry.isChecked()){
+                            teacher.child("Subjects").child(countsubject.toString()).setValue("Chemistry")
+                            countsubject++
                             if(ninth.isChecked()){
                                 db.getReference().child("Teachers").child("Chemistry").child("9th").child(mytiming).child(auth.currentUser!!.uid.toString()).setValue(name)
                             }
@@ -186,6 +213,8 @@ class TeacherActivity : AppCompatActivity() {
                             }
                         }
                         if(biology.isChecked()){
+                            teacher.child("Subjects").child(countsubject.toString()).setValue("Biology")
+                            countsubject++
                             if(ninth.isChecked()){
                                 db.getReference().child("Teachers").child("Biology").child("9th").child(mytiming).child(auth.currentUser!!.uid.toString()).setValue(name)
                             }
@@ -200,6 +229,8 @@ class TeacherActivity : AppCompatActivity() {
                             }
                         }
                         if(islamiat.isChecked()){
+                            teacher.child("Subjects").child(countsubject.toString()).setValue("Islamiat")
+                            countsubject++
                             if(ninth.isChecked()){
                                 db.getReference().child("Teachers").child("Islamiat").child("9th").child(mytiming).child(auth.currentUser!!.uid.toString()).setValue(name)
                             }
@@ -214,6 +245,8 @@ class TeacherActivity : AppCompatActivity() {
                             }
                         }
                         if(urdu.isChecked()){
+                            teacher.child("Subjects").child(countsubject.toString()).setValue("Urdu")
+                            countsubject++
                             if(ninth.isChecked()){
                                 db.getReference().child("Teachers").child("Urdu").child("9th").child(mytiming).child(auth.currentUser!!.uid.toString()).setValue(name)
                             }
@@ -228,6 +261,8 @@ class TeacherActivity : AppCompatActivity() {
                             }
                         }
                         if(punjabi.isChecked()){
+                            teacher.child("Subjects").child(countsubject.toString()).setValue("Punjabi")
+                            countsubject++
                             if(ninth.isChecked()){
                                 db.getReference().child("Teachers").child("Punjabi").child("9th").child(mytiming).child(auth.currentUser!!.uid.toString()).setValue(name)
                             }
@@ -242,6 +277,8 @@ class TeacherActivity : AppCompatActivity() {
                             }
                         }
                         if(computer.isChecked()){
+                            teacher.child("Subjects").child(countsubject.toString()).setValue("Computer")
+                            countsubject++
                             if(ninth.isChecked()){
                                 db.getReference().child("Teachers").child("Computer").child("9th").child(mytiming).child(auth.currentUser!!.uid.toString()).setValue(name)
                             }

@@ -12,8 +12,12 @@ import android.content.Intent
 import android.view.View
 import android.widget.Button
 import com.example.android.teletaleem.JoinActivity
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.ValueEventListener
 import java.util.regex.Pattern
-
+var logintype=""
+var message=""
 class LoginActivity : AppCompatActivity() {
     var emailBox: EditText? = null
     var passwordBox: EditText? = null
@@ -35,10 +39,47 @@ class LoginActivity : AppCompatActivity() {
             if (email !== "" && isValidEmailAddress(email) && pass.length >= 8) {
                 auth.signInWithEmailAndPassword(email, pass).addOnCompleteListener { task ->
                     if (task.isSuccessful) {
-                        Toast.makeText(this@LoginActivity, "Logged In", Toast.LENGTH_SHORT).show()
-                        startActivity(Intent(this@LoginActivity, JoinActivity::class.java))
-                        //Only For Slide Show Between Intent
-                        overridePendingTransition(R.anim.slidein, R.anim.slideout)
+                        //Checking LoginType
+                            var studentids= mutableListOf("")
+                        var teacherids= mutableListOf("")
+                        var myref=db.getReference().child("Student Details")
+                        myref.addListenerForSingleValueEvent(object : ValueEventListener {
+                            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                                for (childSnapshot in dataSnapshot.children) {
+                                    studentids.add(childSnapshot.key.toString())
+                                }
+                                if(studentids.contains(auth.currentUser!!.uid)){
+                                    logintype="Student"
+                                    message="Your Related Teachers Are"
+                                    Toast.makeText(this@LoginActivity, "Logged In Student", Toast.LENGTH_SHORT).show()
+                                    startActivity(Intent(this@LoginActivity, JoinActivity::class.java))
+                                    //Only For Slide Show Between Intent
+                                    overridePendingTransition(R.anim.slidein, R.anim.slideout)
+                                }
+                            }
+
+                            override fun onCancelled(databaseError: DatabaseError) {}
+                        })
+                        //Teachers Side
+                        var myreft=db.getReference().child("Teacher Details")
+                        myreft.addListenerForSingleValueEvent(object : ValueEventListener {
+                            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                                for (childSnapshot in dataSnapshot.children) {
+                                    teacherids.add(childSnapshot.key.toString())
+                                }
+                                if(teacherids.contains(auth.currentUser!!.uid)){
+                                    logintype="Teacher"
+                                    message="Your Related Students Are"
+                                    Toast.makeText(this@LoginActivity, "Logged In Teacher", Toast.LENGTH_SHORT).show()
+                                    startActivity(Intent(this@LoginActivity, JoinActivity::class.java))
+                                    //Only For Slide Show Between Intent
+                                    overridePendingTransition(R.anim.slidein, R.anim.slideout)
+                                }
+                            }
+
+                            override fun onCancelled(databaseError: DatabaseError) {}
+                        })
+
                     } else {
                         Toast.makeText(
                             this@LoginActivity,
