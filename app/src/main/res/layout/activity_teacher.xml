@@ -182,6 +182,35 @@
                 app:layout_constraintStart_toEndOf="@id/eleventh"
                 app:layout_constraintTop_toBottomOf="@id/tenth"/>
 
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/drop_down"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="10dp"
+                app:layout_constraintEnd_toEndOf="@id/cl2"
+                app:layout_constraintStart_toStartOf="@id/cl2"
+                app:layout_constraintTop_toBottomOf="@id/twelve" >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Select Class"
+                        android:layout_centerInParent="true"
+                        />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_arrow_drop_down_24"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
             <TextView
                 android:id="@+id/SubjTeach"
                 android:layout_width="wrap_content"
@@ -191,7 +220,7 @@
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="@id/cl2"
                 app:layout_constraintStart_toStartOf="@id/cl2"
-                app:layout_constraintTop_toBottomOf="@id/twelve" />
+                app:layout_constraintTop_toBottomOf="@id/drop_down" />
             <GridLayout
                 android:id="@+id/grid"
                 android:layout_width="match_parent"
@@ -265,6 +294,36 @@
                     android:textSize="20sp"
                     android:id="@+id/com"/>
             </GridLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/drop_down2"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="10dp"
+                app:layout_constraintEnd_toEndOf="@id/cl2"
+                app:layout_constraintStart_toStartOf="@id/cl2"
+                app:layout_constraintTop_toBottomOf="@id/grid" >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Select Courses"
+                        android:layout_centerInParent="true"
+                        />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_arrow_drop_down_24"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
             <TextView
                 android:id="@+id/time"
                 android:layout_width="wrap_content"
@@ -274,7 +333,7 @@
                 app:layout_constraintStart_toStartOf="@id/cl2"
                 app:layout_constraintTop_toTopOf="@id/timings"
                 app:layout_constraintBottom_toBottomOf="@id/timings"
-                app:layout_constraintTop_toBottomOf="@id/grid"/>
+                app:layout_constraintTop_toBottomOf="@id/drop_down2"/>
 
             <Spinner
                 android:id="@+id/timings"
@@ -283,7 +342,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 app:layout_constraintStart_toEndOf="@id/time"
-                app:layout_constraintTop_toBottomOf="@id/grid" />
+                app:layout_constraintTop_toBottomOf="@id/drop_down2" />
 
             <EditText
                 android:id="@+id/passwordbox"
@@ -300,17 +359,32 @@
                 app:layout_constraintStart_toStartOf="@id/cl2"
                 app:layout_constraintTop_toBottomOf="@id/timings" />
 
+            <EditText
+                android:id="@+id/passwordbox2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/textbox_style"
+                android:backgroundTint="#FFFDFD"
+                android:hint="@string/hintpass"
+                android:inputType="textPassword"
+                android:textColor="#090909"
+                android:textColorHint="#090909"
+                app:layout_constraintEnd_toEndOf="@id/cl2"
+                app:layout_constraintStart_toStartOf="@id/cl2"
+                app:layout_constraintTop_toBottomOf="@id/passwordbox" />
+
             <Button
                 android:id="@+id/done"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
-                android:text="@string/complete"
+                android:text="@string/confirm_password"
                 app:layout_constraintBottom_toBottomOf="@id/cl2"
                 app:layout_constraintEnd_toEndOf="@id/cl2"
                 app:layout_constraintStart_toStartOf="@id/cl2"
-                app:layout_constraintTop_toBottomOf="@id/passwordbox" />
+                app:layout_constraintTop_toBottomOf="@id/passwordbox2" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

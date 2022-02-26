@@ -4,11 +4,15 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.card.MaterialCardView
 import java.util.regex.Matcher
 import java.util.regex.Pattern
 
 
 class TeacherActivity : AppCompatActivity() {
+//    var selectCard: MaterialCardView? = null
+//    var tvClass: TextView? = null
+//    val courseList: ArrayList<Integer> = new ArrayList()
     var edtName: EditText? = null
     var edtCnic: EditText? = null
     var edtMobile: EditText? = null

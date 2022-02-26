@@ -195,15 +195,48 @@
                 android:textSize="20sp" />
         </GridLayout>
 
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/drop_down"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="10dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/grid">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:hint="Select Courses" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_baseline_arrow_drop_down_24" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
         <TextView
             android:id="@+id/time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/timings"
             android:textSize="20sp"
+            android:layout_marginTop="30dp"
             app:layout_constraintStart_toStartOf="@id/CL1"
             app:layout_constraintBottom_toBottomOf="@id/timings"
-            app:layout_constraintTop_toTopOf="@id/timings"
+            app:layout_constraintTop_toBottomOf="@id/drop_down"
             />
 
         <Spinner
@@ -220,7 +253,6 @@
             android:id="@+id/passwordbox"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginTop="10dp"
             android:background="@drawable/textbox_style"
             android:backgroundTint="#FFFDFD"
             android:hint="@string/hintpass"
@@ -231,6 +263,21 @@
             app:layout_constraintEnd_toEndOf="@id/CL1"
             app:layout_constraintStart_toStartOf="@id/CL1"
             app:layout_constraintTop_toBottomOf="@id/timings" />
+        <EditText
+            android:id="@+id/passwordbox2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/textbox_style"
+            android:backgroundTint="#FFFDFD"
+            android:hint="@string/confirm_password"
+            android:inputType="textPassword"
+            android:textColor="#090909"
+            android:textColorHint="#090909"
+            app:layout_constraintBottom_toTopOf="@id/done"
+            app:layout_constraintEnd_toEndOf="@id/CL1"
+            app:layout_constraintStart_toStartOf="@id/CL1"
+            app:layout_constraintTop_toBottomOf="@id/passwordbox" />
 
         <Button
             android:id="@+id/done"
@@ -242,7 +289,7 @@
             app:layout_constraintBottom_toBottomOf="@id/CL1"
             app:layout_constraintEnd_toEndOf="@id/CL1"
             app:layout_constraintStart_toStartOf="@id/CL1"
-            app:layout_constraintTop_toBottomOf="@id/passwordbox" />
+            app:layout_constraintTop_toBottomOf="@id/passwordbox2" />
     </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

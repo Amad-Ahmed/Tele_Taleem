@@ -2,7 +2,7 @@
     <string name="app_name">Tele Taleem</string>
     <string name="login">WELCOME \nBACK</string>
     <string name="hintmail">Enter email</string>
-    <string name="hintpass">Enter password</string>
+    <string name="hintpass">Create new Password</string>
     <string name="message2">Class</string>
     <string name="Computer">Computer</string>
     <string name="Punjabi">Punjabi</string>
@@ -35,6 +35,7 @@
     <string name="key_subjects">Key Subjects</string>
     <string name="certification">Certification</string>
     <string name="please_select_subjects_you_would_like_to_teach">Please select subjects you would like to teach :</string>
+    <string name="confirm_password">Confirm Password</string>
 
 
 </resources>
