@@ -2,6 +2,7 @@ package com.example.android.teletaleem
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.card.MaterialCardView
@@ -41,6 +42,30 @@ class TeacherActivity : AppCompatActivity() {
             ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, genders)
         gender.setAdapter(adapter2)
         timings.setAdapter(adapter)
+        gender.onItemSelectedListener = object :
+            AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>,
+                                        view: View, position: Int, id: Long) {
+                Toast.makeText(this@TeacherActivity,
+                    genders[position], Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>) {
+                // write code to perform some action
+            }
+        }
+        timings.onItemSelectedListener = object :
+            AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>,
+                                        view: View, position: Int, id: Long) {
+                Toast.makeText(this@TeacherActivity,
+                    times[position], Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>) {
+                // write code to perform some action
+            }
+        }
         //edtCnic.addTextChangedListener(PatternedTextWatcher("#####-#######-#"))
         //        edtMobile.addTextChangedListener(new PatternedTextWatcher("####-#######"));
         //Complete Button

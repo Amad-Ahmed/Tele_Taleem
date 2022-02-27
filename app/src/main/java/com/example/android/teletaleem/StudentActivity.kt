@@ -2,6 +2,7 @@ package com.example.android.teletaleem
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.facebook.react.modules.core.Timing
@@ -36,6 +37,59 @@ class StudentActivity : AppCompatActivity() {
         gender.setAdapter(adapter2)
         timings.setAdapter(adapter)
         Class.setAdapter(adapter3)
+        //Spinner Listener
+        gender.onItemSelectedListener = object :
+            AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>,
+                                        view: View, position: Int, id: Long) {
+                Toast.makeText(this@StudentActivity,
+                    genders[position], Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>) {
+                // write code to perform some action
+            }
+        }
+        timings.onItemSelectedListener = object :
+            AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>,
+                view: View, position: Int, id: Long
+            ) {
+                Toast.makeText(
+                    this@StudentActivity,
+                    times[position], Toast.LENGTH_SHORT
+                ).show()
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>) {
+                // write code to perform some action
+            }
+        }
+            Class.onItemSelectedListener = object :
+                AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(parent: AdapterView<*>,
+                                            view: View, position: Int, id: Long) {
+                    Toast.makeText(this@StudentActivity,
+                        classes[position], Toast.LENGTH_SHORT).show()
+                }
+
+                override fun onNothingSelected(parent: AdapterView<*>) {
+                    // write code to perform some action
+                }
+            }
+            timings.onItemSelectedListener = object :
+                AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(parent: AdapterView<*>,
+                                            view: View, position: Int, id: Long) {
+                    Toast.makeText(this@StudentActivity,
+                        times[position], Toast.LENGTH_SHORT).show()
+                }
+
+                override fun onNothingSelected(parent: AdapterView<*>) {
+                    // write code to perform some action
+                }
+            }
         //edtCnic.addTextChangedListener(PatternedTextWatcher("#####-#######-#"))
         //        edtMobile.addTextChangedListener(new PatternedTextWatcher("####-#######"));
         //Complete Button
