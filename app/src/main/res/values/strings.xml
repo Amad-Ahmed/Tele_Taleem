@@ -36,6 +36,10 @@
     <string name="certification">Certification</string>
     <string name="please_select_subjects_you_would_like_to_teach">Please select subjects you would like to teach :</string>
     <string name="confirm_password">Confirm Password</string>
+    <string name="ts_cs"><![CDATA[TS & CS]]></string>
+    <string name="about">About</string>
+    <string name="welcome">Welcome</string>
+    <string name="please_login_or_sign_up_to_continue">Please login or sign-up to continue</string>
 
 
 </resources>
