@@ -3,23 +3,36 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/TeleTaleem/TT/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.22447916666666667" />
+        <entry key="..\:/TeleTaleem/TT/app/src/main/res/drawable/ic_launcher_background.xml" value="0.22447916666666667" />
+        <entry key="..\:/TeleTaleem/TT/app/src/main/res/drawable/ic_logo.xml" value="0.22447916666666667" />
+        <entry key="..\:/TeleTaleem/TT/app/src/main/res/drawable/ic_logo_background.xml" value="0.22447916666666667" />
+        <entry key="..\:/TeleTaleem/TT/app/src/main/res/drawable/ic_teletaleem.xml" value="0.22447916666666667" />
+        <entry key="..\:/TeleTaleem/TT/app/src/main/res/layout/TeleTaleem UI_UX - for portfolio.xml" value="0.25" />
         <entry key="..\:/TeleTaleem/TT/app/src/main/res/layout/activity_join.xml" value="0.25" />
         <entry key="..\:/TeleTaleem/TT/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/TeleTaleem/TT/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/TeleTaleem/TT/app/src/main/res/layout/activity_selection.xml" value="0.33" />
         <entry key="..\:/TeleTaleem/TT/app/src/main/res/layout/activity_student.xml" value="0.33" />
+        <entry key="..\:/TeleTaleem/TT/app/src/main/res/layout/activity_student_dashboard.xml" value="0.20833333333333334" />
         <entry key="..\:/TeleTaleem/TT/app/src/main/res/layout/activity_teacher.xml" value="0.33" />
+        <entry key="..\:/TeleTaleem/TT/app/src/main/res/layout/fragment_st_assignment.xml" value="0.19427083333333334" />
+        <entry key="..\:/TeleTaleem/TT/app/src/main/res/layout/fragment_st_chat.xml" value="0.20833333333333334" />
+        <entry key="..\:/TeleTaleem/TT/app/src/main/res/layout/fragment_st_home.xml" value="0.20833333333333334" />
+        <entry key="..\:/TeleTaleem/TT/app/src/main/res/layout/fragment_st_progress.xml" value="0.19427083333333334" />
+        <entry key="..\:/TeleTaleem/TT/app/src/main/res/layout/fragment_st_quiz.xml" value="0.20833333333333334" />
+        <entry key="..\:/TeleTaleem/TT/app/src/main/res/layout/student_dashboard.xml" value="0.22" />
         <entry key="..\:/TeleTaleem/app/src/main/res/drawable/textbox_style.xml" value="0.290625" />
         <entry key="..\:/TeleTaleem/app/src/main/res/layout/activity_login.xml" value="0.27447916666666666" />
         <entry key="..\:/TeleTaleem/app/src/main/res/layout/activity_main.xml" value="0.27447916666666666" />
         <entry key="..\:/TeleTaleem/app/src/main/res/layout/activity_sign_up.xml" value="0.27447916666666666" />
-        <entry key="..\:/Users/hp/AndroidStudioProjects/Tele_Taleem/app/src/main/res/layout/activity_join.xml" value="0.16" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/Tele_Taleem/app/src/main/res/layout/activity_join.xml" value="0.25" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/Tele_Taleem/app/src/main/res/layout/activity_login.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/Tele_Taleem/app/src/main/res/layout/activity_main.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/Tele_Taleem/app/src/main/res/layout/activity_selection.xml" value="0.17" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/Tele_Taleem/app/src/main/res/layout/activity_sign_up.xml" value="0.27291666666666664" />
-        <entry key="..\:/Users/hp/AndroidStudioProjects/Tele_Taleem/app/src/main/res/layout/activity_student.xml" value="0.13" />
-        <entry key="..\:/Users/hp/AndroidStudioProjects/Tele_Taleem/app/src/main/res/layout/activity_teacher.xml" value="0.16" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/Tele_Taleem/app/src/main/res/layout/activity_student.xml" value="0.16" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/Tele_Taleem/app/src/main/res/layout/activity_teacher.xml" value="0.2" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/Tele_Taleem1/app/src/main/res/layout/activity_join.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/Tele_Taleem1/app/src/main/res/layout/activity_login.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/Tele_Taleem1/app/src/main/res/layout/activity_main.xml" value="0.27291666666666664" />

@@ -40,6 +40,8 @@
     <string name="about">About</string>
     <string name="welcome">Welcome</string>
     <string name="please_login_or_sign_up_to_continue">Please login or sign-up to continue</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

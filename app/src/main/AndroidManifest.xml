@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TeleTaleem">
         <activity
+            android:name=".student_dashboard"
+            android:exported="false" />
+        <activity
             android:name=".StudentActivity"
             android:exported="false" />
         <activity
