@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".stSignupNew">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/CL1">
+
+            <ImageView
+                android:id="@+id/backLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/login_circle"
+                app:layout_constraintStart_toStartOf="@id/CL1"
+                app:layout_constraintTop_toTopOf="@id/CL1" />
+
+            <TextView
+                android:id="@+id/st"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/bebasneue_regular"
+                android:text="Teacher"
+                android:textColor="@color/white"
+                android:textSize="70dp"
+                app:layout_constraintBottom_toBottomOf="@+id/backLogin"
+                app:layout_constraintEnd_toEndOf="@+id/backLogin"
+                app:layout_constraintStart_toStartOf="@+id/backLogin"
+                app:layout_constraintTop_toTopOf="@+id/backLogin" />
+
+            <TextView
+                android:id="@+id/subtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/bebasneue_regular"
+                android:text="Details"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                app:layout_constraintBottom_toBottomOf="@+id/backLogin"
+                app:layout_constraintEnd_toEndOf="@+id/st"
+                app:layout_constraintStart_toStartOf="@+id/st"
+                app:layout_constraintTop_toBottomOf="@+id/st" />
+
+
+            <TextView
+                android:id="@+id/classText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="monospace"
+                android:text="Class"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/subtext"
+                app:layout_constraintStart_toStartOf="@id/CL1"
+                app:layout_constraintTop_toBottomOf="@+id/backLogin" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9th"
+                android:textSize="20sp"
+                android:id="@+id/ninth"
+                app:layout_constraintStart_toStartOf="@id/CL1"
+                app:layout_constraintEnd_toStartOf="@id/tenth"
+                app:layout_constraintTop_toBottomOf="@id/classText"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10th"
+                android:textSize="20sp"
+                android:id="@+id/tenth"
+
+                app:layout_constraintEnd_toEndOf="@id/CL1"
+                app:layout_constraintStart_toEndOf="@id/ninth"
+                app:layout_constraintTop_toBottomOf="@id/classText"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11th"
+                android:textSize="20sp"
+                android:id="@+id/eleventh"
+                app:layout_constraintStart_toStartOf="@id/CL1"
+                app:layout_constraintEnd_toStartOf="@id/twelve"
+                app:layout_constraintTop_toBottomOf="@id/ninth"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12th"
+                android:textSize="20sp"
+                android:id="@+id/twelve"
+                app:layout_constraintEnd_toEndOf="@id/CL1"
+                app:layout_constraintStart_toEndOf="@id/eleventh"
+                app:layout_constraintTop_toBottomOf="@id/tenth"/>
+
+            <TextView
+                android:id="@+id/subj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="monospace"
+                android:text="Subjects"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/grid"
+                app:layout_constraintStart_toStartOf="@+id/classText"
+                app:layout_constraintTop_toBottomOf="@id/eleventh" />
+
+            <GridLayout
+                android:id="@+id/grid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:columnCount="2"
+                android:orientation="vertical"
+                android:rowCount="5"
+                app:layout_constraintEnd_toEndOf="@id/CL1"
+                app:layout_constraintStart_toStartOf="@id/CL1"
+                app:layout_constraintTop_toBottomOf="@id/subj">
+
+                <CheckBox
+                    android:id="@+id/eng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/English"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/math"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Mathematics"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/phy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Physics"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/chem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Chemistry"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/bio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Biology"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/isl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Islamiat"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/urdu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Urdu"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/pun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Punjabi"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/com"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Computer"
+                    android:textSize="20sp" />
+            </GridLayout>
+
+            <TextView
+                android:id="@+id/timingsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="monospace"
+                android:text="Timings"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/Class"
+                app:layout_constraintStart_toStartOf="@+id/subj"
+                app:layout_constraintTop_toBottomOf="@+id/grid" />
+
+            <Spinner
+                android:id="@+id/timings"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                app:layout_constraintBottom_toBottomOf="@+id/timingsText"
+                app:layout_constraintEnd_toEndOf="@id/CL1"
+                app:layout_constraintStart_toStartOf="@id/CL1"
+                app:layout_constraintTop_toTopOf="@+id/timingsText" />
+
+            <TextView
+                android:id="@+id/passText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="monospace"
+                android:text="Enter Password"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/timingsText"
+                app:layout_constraintTop_toBottomOf="@+id/timings" />
+
+            <EditText
+                android:id="@+id/PassBox"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/textbox_style"
+                android:hint="e.g. 1@Alijkl3"
+                android:inputType="textPassword"
+                android:textColor="#050505"
+                app:layout_constraintEnd_toEndOf="@id/CL1"
+                app:layout_constraintStart_toStartOf="@id/CL1"
+                app:layout_constraintTop_toBottomOf="@+id/passText" />
+
+            <TextView
+                android:id="@+id/confText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="monospace"
+                android:text="Confirm Password"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/timingsText"
+                app:layout_constraintTop_toBottomOf="@+id/PassBox" />
+
+            <EditText
+                android:id="@+id/confBox"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/textbox_style"
+                android:hint="e.g. 1@Alijkl3"
+                android:inputType="textPassword"
+                android:textColor="#050505"
+                app:layout_constraintEnd_toEndOf="@id/CL1"
+                app:layout_constraintStart_toStartOf="@id/CL1"
+                app:layout_constraintTop_toBottomOf="@+id/confText" />
+
+            <TextView
+                android:id="@+id/logBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:fontFamily="monospace"
+                android:text="Next"
+                android:textSize="28dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/btn"
+                app:layout_constraintEnd_toStartOf="@+id/btn"
+                app:layout_constraintTop_toTopOf="@+id/btn" />
+
+
+            <ImageView
+                android:id="@+id/btn"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="60dp"
+                android:src="@drawable/login_btn"
+                android:layout_marginTop="20dp"
+                app:layout_constraintBottom_toBottomOf="@id/CL1"
+                app:layout_constraintEnd_toEndOf="@id/CL1"
+                app:layout_constraintStart_toStartOf="@id/CL1"
+                app:layout_constraintTop_toBottomOf="@id/confBox"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>
