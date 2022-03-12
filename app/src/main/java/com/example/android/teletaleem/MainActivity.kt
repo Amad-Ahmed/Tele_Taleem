@@ -21,6 +21,11 @@ class MainActivity : AppCompatActivity() {
                 //Only For Slide Show Between Intent
                 overridePendingTransition(R.anim.slidein, R.anim.slideout)
             }
+            else{
+                startActivity(Intent(this@MainActivity, JoinActivity::class.java))
+                //Only For Slide Show Between Intent
+                overridePendingTransition(R.anim.slidein, R.anim.slideout)
+            }
         }, 2000)
     }
 
