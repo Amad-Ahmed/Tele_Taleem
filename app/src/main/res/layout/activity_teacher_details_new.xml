@@ -285,7 +285,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
                 android:fontFamily="monospace"
-                android:text="Next"
+                android:text="Finish"
                 android:textSize="28dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/btn"

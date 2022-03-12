@@ -16,9 +16,11 @@ class MainActivity : AppCompatActivity() {
 
         getSupportActionBar()?.hide()
         Handler().postDelayed({
-            startActivity(Intent(this@MainActivity, SelectionActivity::class.java))
-            //Only For Slide Show Between Intent
-            overridePendingTransition(R.anim.slidein, R.anim.slideout)
+            if(auth.currentUser==null) {
+                startActivity(Intent(this@MainActivity, SelectionActivity::class.java))
+                //Only For Slide Show Between Intent
+                overridePendingTransition(R.anim.slidein, R.anim.slideout)
+            }
         }, 2000)
     }
 

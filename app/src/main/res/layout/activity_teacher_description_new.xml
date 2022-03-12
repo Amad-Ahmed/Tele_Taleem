@@ -77,11 +77,11 @@
         android:id="@+id/logBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
         android:fontFamily="monospace"
-        android:text="Finish"
+        android:text="Next"
         android:textSize="28dp"
         android:textStyle="bold"
-        android:layout_marginRight="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/btn"
         app:layout_constraintEnd_toStartOf="@+id/btn"
         app:layout_constraintTop_toTopOf="@+id/btn" />

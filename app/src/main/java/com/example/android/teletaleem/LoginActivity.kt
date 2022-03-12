@@ -1,16 +1,14 @@
 package com.example.android.teletaleem
 
 import androidx.appcompat.app.AppCompatActivity
-import android.widget.EditText
 import android.os.Bundle
 import com.example.android.teletaleem.R
 import com.example.android.teletaleem.LoginActivity
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.AuthResult
-import android.widget.Toast
 import android.content.Intent
 import android.view.View
-import android.widget.Button
+import android.widget.*
 import com.example.android.teletaleem.JoinActivity
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -29,8 +27,8 @@ class LoginActivity : AppCompatActivity() {
         getSupportActionBar()?.hide()
         var emailBox:EditText = findViewById(R.id.emailbox)
         var passwordBox:EditText = findViewById(R.id.passwordbox)
-        var loginBtn:Button = findViewById(R.id.loginBtn)
-        var signupBtn:Button = findViewById(R.id.createBtn)
+        var loginBtn:ImageView = findViewById(R.id.btn)
+        var signupBtn:TextView = findViewById(R.id.SignBTN)
         loginBtn.setOnClickListener(View.OnClickListener {
             val email: String
             val pass: String

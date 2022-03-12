@@ -21,14 +21,14 @@ class SelectionActivity : AppCompatActivity() {
             View.OnClickListener
             //for teacher journey
             {
-                val i = Intent(this@SelectionActivity, TeacherActivity::class.java)
+                val i = Intent(this@SelectionActivity, teacherSignupNew::class.java)
                 startActivity(i)
             })
         student.setOnClickListener(
             View.OnClickListener
             //for student journey
             {
-                val i = Intent(this@SelectionActivity, StudentActivity::class.java)
+                val i = Intent(this@SelectionActivity, stSignupNew::class.java)
                 startActivity(i)
             })
         login.setOnClickListener(
