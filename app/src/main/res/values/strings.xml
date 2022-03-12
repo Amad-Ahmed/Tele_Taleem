@@ -44,7 +44,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="sign_up"><u>Sign Up</u></string>
     <string name="password">password</string>
-    <string name="description">Education Details<br></br><br></br>Experience<br></br><br></br>Interest<br></br><br></br>Certification</string>
+    <string name="description">Education Details, Experience, Interest, Certification</string>
 
 
 </resources>

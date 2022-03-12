@@ -112,13 +112,16 @@
                     android:id="@+id/eng"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:buttonTint="@color/Green"
                     android:text="@string/English"
+
                     android:textSize="20sp" />
 
                 <CheckBox
                     android:id="@+id/math"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:buttonTint="@color/Green"
                     android:text="@string/Mathematics"
                     android:textSize="20sp" />
 
@@ -126,6 +129,7 @@
                     android:id="@+id/phy"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:buttonTint="@color/Green"
                     android:text="@string/Physics"
                     android:textSize="20sp" />
 
@@ -133,6 +137,7 @@
                     android:id="@+id/chem"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:buttonTint="@color/Green"
                     android:text="@string/Chemistry"
                     android:textSize="20sp" />
 
@@ -140,6 +145,7 @@
                     android:id="@+id/bio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:buttonTint="@color/Green"
                     android:text="@string/Biology"
                     android:textSize="20sp" />
 
@@ -147,6 +153,7 @@
                     android:id="@+id/isl"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:buttonTint="@color/Green"
                     android:text="@string/Islamiat"
                     android:textSize="20sp" />
 
@@ -154,6 +161,7 @@
                     android:id="@+id/urdu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:buttonTint="@color/Green"
                     android:text="@string/Urdu"
                     android:textSize="20sp" />
 
@@ -161,6 +169,7 @@
                     android:id="@+id/pun"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:buttonTint="@color/Green"
                     android:text="@string/Punjabi"
                     android:textSize="20sp" />
 
@@ -168,6 +177,7 @@
                     android:id="@+id/com"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:buttonTint="@color/Green"
                     android:text="@string/Computer"
                     android:textSize="20sp" />
             </GridLayout>
@@ -188,8 +198,8 @@
 
             <Spinner
                 android:id="@+id/timings"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="@+id/timingsText"
                 app:layout_constraintEnd_toEndOf="@id/CL1"
                 app:layout_constraintStart_toStartOf="@id/CL1"
@@ -199,7 +209,7 @@
                 android:id="@+id/passText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="30dp"
                 android:fontFamily="monospace"
                 android:text="Enter Password"
                 android:textColor="@color/black"
