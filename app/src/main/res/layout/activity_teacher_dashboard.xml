@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:id="@+id/StFrame_layout"/>
+        android:id="@+id/main"/>
 
     <com.etebarian.meowbottomnavigation.MeowBottomNavigation
         android:layout_width="match_parent"
@@ -22,5 +22,12 @@
         app:mbn_selectedIconColor="#EDEEF1"
         app:mbn_countTextColor="@color/white"
         app:mbn_defaultIconColor="@color/white"
-        app:mbn_backgroundBottomColor="#EDEEF1"/>
+        app:mbn_backgroundBottomColor="#EDEEF1">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/BOTTOMNAV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:menu="@menu/teachermenu" />
+    </com.etebarian.meowbottomnavigation.MeowBottomNavigation>
 </LinearLayout>

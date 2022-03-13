@@ -1,14 +1,56 @@
-package com.example.android.teletaleem;
+package com.example.android.teletaleem
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import com.example.android.teletaleem.databinding.ActivityTeacherDashboardBinding
 
-import android.os.Bundle;
+class TeacherDashboard : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        var binding : ActivityTeacherDashboardBinding = ActivityTeacherDashboardBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.main, teacherHome())
+        transaction.addToBackStack(null)
+        transaction.commit()
+        binding.BOTTOMNAV.setOnNavigationItemSelectedListener { item ->
+            when(item.itemId){
+                R.id.home ->{
+                    val transaction = supportFragmentManager.beginTransaction()
+                    transaction.replace(R.id.main, teacherHome())
+                    transaction.addToBackStack(null)
+                    transaction.commit()
+                }
+                R.id.assignment ->{
+                    val transaction = supportFragmentManager.beginTransaction()
+                    transaction.replace(R.id.main, teacherAssignment())
+                    transaction.addToBackStack(null)
+                    transaction.commit()
+                }
+                R.id.chat ->{
+                    val transaction = supportFragmentManager.beginTransaction()
+                    transaction.replace(R.id.main, teacherChat())
+                    transaction.addToBackStack(null)
+                    transaction.commit()
+                }
+                R.id._class ->{
+                    val transaction = supportFragmentManager.beginTransaction()
+                    transaction.replace(R.id.main, teacherClass())
+                    transaction.addToBackStack(null)
+                    transaction.commit()
+                }
+                R.id.quizt ->{
+                    val transaction = supportFragmentManager.beginTransaction()
+                    transaction.replace(R.id.main, TeacherQuiz())
+                    transaction.addToBackStack(null)
+                    transaction.commit()
+                }
+            }
+            true
+        }
+    }
 
-public class TeacherDashboard extends AppCompatActivity {
+    override fun onBackPressed() {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_teacher_dashboard);
     }
 }
