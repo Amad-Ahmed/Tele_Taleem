@@ -201,8 +201,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="@+id/timingsText"
-                app:layout_constraintEnd_toEndOf="@id/CL1"
-                app:layout_constraintStart_toStartOf="@id/CL1"
+                app:layout_constraintEnd_toEndOf="@+id/Class"
+                app:layout_constraintStart_toEndOf="@+id/timingsText"
                 app:layout_constraintTop_toTopOf="@+id/timingsText" />
 
             <TextView
@@ -224,7 +224,7 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/textbox_style"
-                android:hint="e.g. 1@Alijkl3"
+                android:hint="e.g. 1@Aa"
                 android:inputType="textPassword"
                 android:textColor="#050505"
                 app:layout_constraintEnd_toEndOf="@id/CL1"
@@ -250,7 +250,7 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/textbox_style"
-                android:hint="e.g. 1@Alijkl3"
+                android:hint="e.g. 1@Aa"
                 android:inputType="textPassword"
                 android:textColor="#050505"
                 app:layout_constraintEnd_toEndOf="@id/CL1"

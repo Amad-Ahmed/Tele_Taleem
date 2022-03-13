@@ -12,10 +12,10 @@
         android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/CL1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:id="@+id/CL1">
+            android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/backLogin"
@@ -74,48 +74,48 @@
                 app:layout_constraintTop_toBottomOf="@+id/backLogin" />
 
             <CheckBox
+                android:id="@+id/ninth"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="9th"
                 android:buttonTint="@color/Green"
+                android:text="9th"
                 android:textSize="20sp"
-                android:id="@+id/ninth"
-                app:layout_constraintStart_toStartOf="@id/CL1"
                 app:layout_constraintEnd_toStartOf="@id/tenth"
-                app:layout_constraintTop_toBottomOf="@id/classText"/>
+                app:layout_constraintStart_toStartOf="@id/CL1"
+                app:layout_constraintTop_toBottomOf="@id/classText" />
 
             <CheckBox
+                android:id="@+id/tenth"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Green"
                 android:text="10th"
                 android:textSize="20sp"
-                android:id="@+id/tenth"
-                android:buttonTint="@color/Green"
                 app:layout_constraintEnd_toEndOf="@id/CL1"
                 app:layout_constraintStart_toEndOf="@id/ninth"
-                app:layout_constraintTop_toBottomOf="@id/classText"/>
+                app:layout_constraintTop_toBottomOf="@id/classText" />
 
             <CheckBox
+                android:id="@+id/eleventh"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Green"
                 android:text="11th"
                 android:textSize="20sp"
-                android:id="@+id/eleventh"
-                android:buttonTint="@color/Green"
-                app:layout_constraintStart_toStartOf="@id/CL1"
                 app:layout_constraintEnd_toStartOf="@id/twelve"
-                app:layout_constraintTop_toBottomOf="@id/ninth"/>
+                app:layout_constraintStart_toStartOf="@id/CL1"
+                app:layout_constraintTop_toBottomOf="@id/ninth" />
 
             <CheckBox
+                android:id="@+id/twelve"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Green"
                 android:text="12th"
                 android:textSize="20sp"
-                android:id="@+id/twelve"
-                android:buttonTint="@color/Green"
                 app:layout_constraintEnd_toEndOf="@id/CL1"
                 app:layout_constraintStart_toEndOf="@id/eleventh"
-                app:layout_constraintTop_toBottomOf="@id/tenth"/>
+                app:layout_constraintTop_toBottomOf="@id/tenth" />
 
             <TextView
                 android:id="@+id/subj"
@@ -147,8 +147,8 @@
                     android:id="@+id/eng"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/English"
                     android:buttonTint="@color/Green"
+                    android:text="@string/English"
                     android:textSize="20sp" />
 
                 <CheckBox
@@ -226,7 +226,6 @@
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@+id/timings"
                 app:layout_constraintStart_toStartOf="@+id/subj"
                 app:layout_constraintTop_toBottomOf="@+id/grid" />
 
@@ -235,9 +234,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="@+id/timingsText"
-                app:layout_constraintEnd_toEndOf="@id/CL1"
-                app:layout_constraintStart_toStartOf="@id/CL1"
-                app:layout_constraintTop_toTopOf="@+id/timingsText" />
+                app:layout_constraintEnd_toEndOf="@+id/passText"
+                app:layout_constraintStart_toEndOf="@+id/timingsText"
+                app:layout_constraintTop_toTopOf="@+id/timingsText"
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/passText"
@@ -258,7 +258,7 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/textbox_style"
-                android:hint="e.g. 1@Alijkl3"
+                android:hint="e.g. 1@Aa"
                 android:inputType="textPassword"
                 android:textColor="#050505"
                 app:layout_constraintEnd_toEndOf="@id/CL1"
@@ -284,7 +284,7 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/textbox_style"
-                android:hint="e.g. 1@Alijkl3"
+                android:hint="e.g. 1@Aa"
                 android:inputType="textPassword"
                 android:textColor="#050505"
                 app:layout_constraintEnd_toEndOf="@id/CL1"
@@ -310,12 +310,12 @@
                 android:layout_width="45dp"
                 android:layout_height="45dp"
                 android:layout_marginLeft="60dp"
-                android:src="@drawable/login_btn"
                 android:layout_marginTop="20dp"
+                android:src="@drawable/login_btn"
                 app:layout_constraintBottom_toBottomOf="@id/CL1"
                 app:layout_constraintEnd_toEndOf="@id/CL1"
                 app:layout_constraintStart_toStartOf="@id/CL1"
-                app:layout_constraintTop_toBottomOf="@id/confBox"/>
+                app:layout_constraintTop_toBottomOf="@id/confBox" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

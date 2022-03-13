@@ -34,7 +34,7 @@ class LoginActivity : AppCompatActivity() {
             val pass: String
             email = emailBox.getText().toString()
             pass = passwordBox.getText().toString()
-            if (email !== "" && isValidEmailAddress(email) && pass.length >= 8) {
+            if (email !== "" && isValidEmailAddress(email) && pass.length >= 4) {
                 auth.signInWithEmailAndPassword(email, pass).addOnCompleteListener { task ->
                     if (task.isSuccessful) {
                         //Checking LoginType
